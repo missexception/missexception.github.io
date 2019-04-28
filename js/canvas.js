@@ -1,4 +1,4 @@
-var canvasWidth = 600
+var canvasWidth = 1000
 canvasWidth=window.innerHeight;
 // if(window.innerWidth&&window.innerHeight){
 // 	if(window.innerHeight>window.innerWidth){
@@ -79,34 +79,34 @@ function drawGrid(){
 	context.strokeStyle = "rgb(230, 11, 9)"
 	
 	//田字格四边
-	context.beginPath()
-	context.moveTo(0, 0)
-	context.lineTo(canvasHeight, 0)
-	context.lineTo(canvasHeight, canvasWidth)
-	context.lineTo(0, canvasWidth)
-	context.closePath()
-	//田字格四边
-	context.lineWidth = 5
-	context.stroke()
+	// context.beginPath()
+	// context.moveTo(0, 0)
+	// context.lineTo(canvasHeight, 0)
+	// context.lineTo(canvasHeight, canvasWidth)
+	// context.lineTo(0, canvasWidth)
+	// context.closePath()
+	// //田字格四边
+	// context.lineWidth = 5
+	// context.stroke()
 	
-	context.beginPath()
-	//对角线
-	context.moveTo(0, 0)
-	context.lineTo(canvasHeight, canvasWidth)
+	// context.beginPath()
+	// //对角线
+	// context.moveTo(0, 0)
+	// context.lineTo(canvasHeight, canvasWidth)
 	
-	context.moveTo(canvasHeight, 0)
-	context.lineTo(0, canvasWidth)
-	//对角线
+	// context.moveTo(canvasHeight, 0)
+	// context.lineTo(0, canvasWidth)
+	// //对角线
 	
-	//中间线条
-	context.moveTo(0, canvasHeight/2)
-	context.lineTo(canvasWidth, canvasHeight/2)
+	// //中间线条
+	// context.moveTo(0, canvasHeight/2)
+	// context.lineTo(canvasWidth, canvasHeight/2)
 	
-	context.moveTo(canvasWidth/2, 0)
-	context.lineTo(canvasWidth/2, canvasHeight)
-	//中间线条
-	context.lineWidth = 1
-	context.stroke()
+	// context.moveTo(canvasWidth/2, 0)
+	// context.lineTo(canvasWidth/2, canvasHeight)
+	// //中间线条
+	// context.lineWidth = 1
+	// context.stroke()
 	
 	context.restore()
 }  
