@@ -1,5 +1,5 @@
 var canvasWidth = 600
-canvasWidth=window.innerHeight
+canvasWidth=window.innerHeight;
 // if(window.innerWidth&&window.innerHeight){
 // 	if(window.innerHeight>window.innerWidth){
 // 		canvasWidth=window.innerWidth
