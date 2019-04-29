@@ -13,11 +13,9 @@ ul,ol{list-style: none;}
   top: 0;
   left: 0;
 }
-
 body{
   overflow: hidden;
 }
-
 .actions{
   position: fixed;
   top: 0;
@@ -77,4 +75,9 @@ body{
   height: 0;
   width: 20px;
   border-top: 6px solid black;
+}
+.sizes > .thick2{
+  height: 0;
+  width: 20px;
+  border-top: 9px solid black;
 }
