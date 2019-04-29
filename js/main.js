@@ -32,7 +32,7 @@ red.onclick = function(){
   red.classList.add('active')
   green.classList.remove('active')
   blue.classList.remove('active')
-  blkack.classList.remove('active')
+  black.classList.remove('active')
 }
 green.onclick = function(){
   context.fillStyle = 'green'
