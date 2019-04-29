@@ -1,11 +1,8 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
 var lineWidth = 5
-
 autoSetCanvasSize(yyy)
-
 listenToUser(yyy)
-
 var eraserEnabled = false
 pen.onclick = function(){
   eraserEnabled = false
@@ -29,13 +26,13 @@ download.onclick = function(){
   a.target = '_blank'
   a.click()
 }
-
 red.onclick = function(){
   context.fillStyle = 'red'
   context.strokeStyle = 'red'
   red.classList.add('active')
   green.classList.remove('active')
   blue.classList.remove('active')
+  blkack.classList.remove('active')
 }
 green.onclick = function(){
   context.fillStyle = 'green'
@@ -43,6 +40,7 @@ green.onclick = function(){
   red.classList.remove('active')
   green.classList.add('active')
   blue.classList.remove('active')
+  blkack.classList.remove('active')
 }
 blue.onclick = function(){
   context.fillStyle = 'blue'
@@ -50,8 +48,16 @@ blue.onclick = function(){
   red.classList.remove('active')
   green.classList.remove('active')
   blue.classList.add('active')
+  blkack.classList.remove('active')
 }
-
+black.onclick = function(){
+  context.fillStyle = 'blue'
+  context.strokeStyle = 'blue'
+  red.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  blkack.classList.add('active')
+}
 thin.onclick = function(){
   lineWidth = 5
 }
@@ -62,29 +68,23 @@ thick2.onclick = function(){
   lineWidth = 15
 }
 /******/
-
 function autoSetCanvasSize(canvas) {
   setCanvasSize()
-
   window.onresize = function() {
     setCanvasSize()
   }
-
   function setCanvasSize() {
     var pageWidth = document.documentElement.clientWidth
     var pageHeight = document.documentElement.clientHeight
-
     canvas.width = pageWidth
     canvas.height = pageHeight
   }
 }
-
 function drawCircle(x, y, radius) {
   context.beginPath()
   context.arc(x, y, radius, 0, Math.PI * 2);
   context.fill()
 }
-
 function drawLine(x1, y1, x2, y2) {
   context.beginPath();
   context.moveTo(x1, y1) // 起点
@@ -93,7 +93,6 @@ function drawLine(x1, y1, x2, y2) {
   context.stroke()
   context.closePath()
 }
-
 function listenToUser(canvas) {
   var using = false
   var lastPoint = {
