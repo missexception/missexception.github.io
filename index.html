@@ -1,27 +1,41 @@
-﻿<!doctype html>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8">
-<title>Exception</title>
-
-<link href="css/index.css" rel="stylesheet" type="text/css">
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>NullException</title>
+<link rel="shortcut icon" href="image/head.png" type="image/x-icon" />
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!--利用canvas绘画简单田字格-->
-<canvas id="canvas">你的浏览器不支持canvas</canvas>
-
-<div id = "coltroller">
-	<div id = "clear_btn" class="op_btn" onClick="clean()">清 除</div>
-	<div class="clearfix"></div>
+<canvas id="xxx" width=300 height=300></canvas>
+<div id=actions class="actions">
+	<svg id=pen class="active icon">
+		<use xlink:href="#icon-pen"></use>
+	</svg>
+	<svg id=eraser class="icon">
+		<use xlink:href="#icon-erase"></use>
+	</svg>
+	<svg id=clear class="icon">
+		<use xlink:href="#icon-clear"></use>
+	</svg>
+	<svg id=download class="icon">
+		<use xlink:href="#icon-save"></use>
+	</svg>
 </div>
-
-<script src="js/canvas.js"></script>
+<ol class="colors">
+	<li id="red" class="red active"></li>
+	<li id="green" class="green"></li>
+	<li id="blue" class="blue"></li>
+</ol>
+<ol class="sizes">
+	<li id="thin" class="thin"></li>
+	<li id="thick" class="thick"></li>
+</ol>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/other.js"></script>
 <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p><a href="/eat.html">GAME</a></p></br>
-<p><a href="http://atjcloud.com/" target="_blank">guanzp</a></p>
+<p><a href="/eat.html" target="_blank">PLAY_GAME</a></p>
 </div>
-
 </body>
 </html>
