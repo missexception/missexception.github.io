@@ -29,14 +29,12 @@ body {
   color: #000;
   font-size: 2.5vh;
 }
-
 body {
   font-family: arial;
 }
 body.dark {
   color: #fff;
 }
-
 .card {
   overflow: hidden;
   max-width: 20em;
@@ -46,7 +44,6 @@ body.dark {
   border: 1px solid #000;
   border-radius: 0.25em;
 }
-
 .btn {
   display: block;
   margin: 0 auto 0.5em;
@@ -63,7 +60,6 @@ body.dark {
   border-radius: 4px;
   color: #000;
 }
-
 .checkbox {
   display: inline-block;
   font-weight: bold;
@@ -85,11 +81,9 @@ body.dark {
 .checkbox input:checked + span {
   border-color: #000;
 }
-
 .play .text {
   font-size: 2em;
 }
-
 .scoreboard .scoreboard-list {
   display: inline-block;
   padding: 0;
@@ -122,7 +116,6 @@ body.dark {
 .game .score {
   float: right;
 }
-
 .dark .win {
   text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black, 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
 }
@@ -150,7 +143,6 @@ body.dark {
 .win .highscore.is-hidden {
   display: none;
 }
-
 .screen {
   position: fixed;
   z-index: 10;
@@ -180,7 +172,6 @@ body.dark {
 .screen h1 {
   text-transform: uppercase;
 }
-
 .sky {
   position: fixed;
   top: 0;
@@ -214,7 +205,6 @@ body.dark {
 .dark .sky:before {
   opacity: 0.3;
 }
-
 @keyframes twinkle {
   0% {
     border-left-color: white;
@@ -276,7 +266,6 @@ body.dark {
   transform: rotate(-30deg);
   animation: twinkle 6s infinite alternate;
 }
-
 .moon {
   position: fixed;
   bottom: 20em;
@@ -315,14 +304,12 @@ body.dark {
   transform: translateY(0);
   opacity: 1;
 }
-
 .mountains {
   opacity: 0.3;
 }
 .dark .mountains {
   opacity: 0.9;
 }
-
 .mountain {
   position: fixed;
   left: -100%;
@@ -345,7 +332,6 @@ body.dark {
   height: 10em;
   border-radius: 100% 0 0 0;
 }
-
 .grass {
   display: none;
   position: fixed;
@@ -362,7 +348,6 @@ body.dark {
 .dark .grass {
   background: #0f0f2f;
 }
-
 .water {
   position: fixed;
   z-index: 2;
@@ -379,7 +364,6 @@ body.dark {
 .dark .water {
   background: #0f0f2f;
 }
-
 .tree {
   position: absolute;
   z-index: 3;
@@ -435,7 +419,6 @@ body.dark {
   right: 47%;
   transform: scale(0.4, 0.4);
 }
-
 .lily {
   @extends .shadow;
   position: fixed;
@@ -473,11 +456,9 @@ body.dark {
   opacity: 0.4;
   transform: scale(0.2, 0.15);
 }
-
 .shadow, .fly, .fly:before, .fly:after, .player .body, .player .belly, .player .arms .arm, .player .legs .leg, .player .eyes .eye, .player .tongue-inner {
   box-shadow: none;
 }
-
 .flies {
   display: flex;
   flex-wrap: wrap;
@@ -516,7 +497,6 @@ body.dark {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
 }
-
 .fly {
   z-index: 99;
   display: inline-block;
@@ -1050,7 +1030,6 @@ body.dark {
 .player.is-active .mouth .bottom-lip {
   animation: mouth 0.25s;
 }
-
 @keyframes dead-fly {
   0% {
     visibility: hidden;
@@ -1151,14 +1130,10 @@ body.dark {
     transform: translateY(0);
   }
 }
-
 </style>
-
 <script src="js/prefixfree.min.js"></script>
-
 </head>
 <body>
-
 <div class="environment">
   <div class="sky"></div>
   <div class="stars"></div>
@@ -1178,16 +1153,13 @@ body.dark {
   <div class="water"></div>
   <div class="lily lilly-1"></div>
 </div>
-
 <div class="player">
-  
   <div class="legs">
     <div class="leg leg--left">
     </div>
     <div class="leg leg--right">
     </div>
   </div>
-  
   <div class="body">
     <div class="crown"></div>
     <div class="belly"></div>
@@ -1226,7 +1198,6 @@ body.dark {
     </div>
   </div>
 </div>
-
 <div class="screen menu">
   <h1>喂呱呱</h1>
   <a href="#" class="btn play" onClick="play()">
@@ -1236,20 +1207,17 @@ body.dark {
   </a>
   <a href="#" class="btn" onClick="settings()">设置</a>
 </div>
-
 <div class="screen game">
   <div class="hud">
     <div class="time">
       <span class="label">时间</span>
       <span class="value js-time">30</span>
     </div>
-
     <div class="score">
       <span class="label">分数</span>
       <span class="value js-score">0</span>
     </div>
   </div>
-  
   <div class="flies">
     <div class="path">
       <div class="target">
@@ -1282,33 +1250,25 @@ body.dark {
       </div>
     </div>
   </div>
- 
-  
 </div>
-
 <div class="screen win">
   <h1>完成</h1> 
   <div class="card">
     <h3 class="highscore js-highscore is-hidden">新高分！</h3>
-    
     <div class="score">
       <span class="label">分数</span>
       <span class="value js-score">30</span>
     </div>
-
     <div class="best">
       <span class="label">最好</span>
       <span class="value js-best">0</span>
     </div>
-    
   </div>
   <a href="#" class="btn" onClick="play()">再玩一次</a>
   <a href="#" class="btn btn--clear" onClick="menu()">返回菜单</a>
 </div>
-
 <div class="screen settings">
   <h1>PAN</h1>
-  
   <div class="card">
     <label class="checkbox">
       <input type="radio" name="theme" value="light" checked onClick="toggleTheme(this.value)">
@@ -1319,24 +1279,17 @@ body.dark {
       <span>晚上时间</span>
     </label>
   </div>
-  
   <!-- <a href="#" class="btn js-toggle-music" onClick="toggleMusic()">打开音乐</a> -->
-  
   <a href="#" class="btn" onClick="menu()">返回</a>
 </div>
-
 <div class="screen scoreboard">
   <h1>记分牌</h1>
   <div class="card">
     <ol class="scoreboard-list js-scoreboard"></ol>
   </div>
-  
   <a href="#" class="btn" onClick="menu()">返回</a>
 </div>
-
-<audio id="music" src="zzsc.mp3"></audio>
-
+<!-- <audio id="music" src="zzsc.mp3"></audio> -->
 <script  src="js/eat.js"></script>
-
 </body>
 </html>
