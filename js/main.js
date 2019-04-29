@@ -6,7 +6,6 @@ autoSetCanvasSize(yyy)
 
 listenToUser(yyy)
 
-
 var eraserEnabled = false
 pen.onclick = function(){
   eraserEnabled = false
@@ -30,7 +29,6 @@ download.onclick = function(){
   a.target = '_blank'
   a.click()
 }
-
 
 red.onclick = function(){
   context.fillStyle = 'red'
@@ -60,7 +58,9 @@ thin.onclick = function(){
 thick.onclick = function(){
   lineWidth = 10
 }
-
+thick2.onclick = function(){
+  lineWidth = 15
+}
 /******/
 
 function autoSetCanvasSize(canvas) {
@@ -95,8 +95,6 @@ function drawLine(x1, y1, x2, y2) {
 }
 
 function listenToUser(canvas) {
-
-
   var using = false
   var lastPoint = {
     x: undefined,
@@ -123,9 +121,7 @@ function listenToUser(canvas) {
       console.log('边摸边动')
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
-
       if (!using) {return}
-
       if (eraserEnabled) {
         context.clearRect(x - 5, y - 5, 10, 10)
       } else {
@@ -159,9 +155,7 @@ function listenToUser(canvas) {
     canvas.onmousemove = function(aaa) {
       var x = aaa.clientX
       var y = aaa.clientY
-
       if (!using) {return}
-
       if (eraserEnabled) {
         context.clearRect(x - 5, y - 5, 10, 10)
       } else {
@@ -172,11 +166,9 @@ function listenToUser(canvas) {
         drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y)
         lastPoint = newPoint
       }
-
     }
     canvas.onmouseup = function(aaa) {
       using = false
     }
   }
-
 }
