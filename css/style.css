@@ -84,3 +84,8 @@ body{
   width: 20px;
   border-top: 9px solid black;
 }
+.sizes > .thick3{
+  height: 0;
+  width: 20px;
+  border-top: 12px solid black;
+}
