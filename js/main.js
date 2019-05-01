@@ -67,6 +67,9 @@ thick.onclick = function(){
 thick2.onclick = function(){
   lineWidth = 15
 }
+thick3.onclick = function(){
+  lineWidth = 20
+}
 /******/
 function autoSetCanvasSize(canvas) {
   setCanvasSize()
